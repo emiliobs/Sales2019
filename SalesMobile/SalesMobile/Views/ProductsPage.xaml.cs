@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace SalesMobile
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace SalesMobile.Views
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ProductsPage : ContentPage
     {
-        public MainPage()
+        public ProductsPage()
         {
             InitializeComponent();
         }
