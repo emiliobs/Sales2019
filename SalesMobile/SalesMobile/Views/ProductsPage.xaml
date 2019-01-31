@@ -5,9 +5,31 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="Products">
     <ContentPage.Content>
-        <StackLayout BindingContext="{Binding Product}">
-            <ListView BindingContext="{Binding Products}">
-                
+        <StackLayout BindingContext="{Binding Product}" Padding="5">
+            <ListView ItemsSource="{Binding Products}"
+                      HasUnevenRows="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label
+                                    Grid.Column="0"
+                                    Text="{Binding Description}"
+                                    FontAttributes="Bold">                                    
+                                </Label>
+                                <Label
+                                    Grid.Column="1"
+                                    Text="{Binding Price, StringFormat='{0:C2}'}"
+                                    HorizontalOptions="End">                                     
+                                </Label>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>

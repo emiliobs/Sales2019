@@ -15,5 +15,8 @@
         public bool IsAvailable { get; set; }
 
         public DateTime PublishOn { get; set; }
+
+        public override string ToString() => this.Description;
+     
     }
 }
