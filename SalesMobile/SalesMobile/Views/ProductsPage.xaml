@@ -7,7 +7,10 @@
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Product}" Padding="5">
             <ListView ItemsSource="{Binding Products}"
-                      HasUnevenRows="False">
+                      HasUnevenRows="False"
+                      IsRefreshing="{Binding IsRefreshing}"
+                      RefreshCommand="{Binding RefreshCommand}"
+                      IsPullToRefreshEnabled="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
