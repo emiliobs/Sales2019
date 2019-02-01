@@ -76,11 +76,19 @@
         {
             this.IsRefreshing = true;
 
-            var response = await this.apiService.GetList<Product>("https://salesapiservice.azurewebsites.net", "/api", "/Products");
-            //var urlProducts = Application.Current.Resources["UrlApiProducts"].ToString();
-            //var prefix = Application.Current.Resources["Prefix"].ToString();
-            //var ProductsController = Application.Current.Resources["ProductsController"].ToString();
-            //var response = await this.apiService.GetList<Product>(urlProducts,prefix,ProductsController);
+            var connection = await this.apiService.CheckConnection();
+            if (!connection.IsSuccess)
+            {
+                this.IsRefreshing = false;
+                await Application.Current.MainPage.DisplayAlert("Error.",connection.Message, "Accept.");
+                return;
+            }
+
+            // var response = await this.apiService.GetList<Product>("https://salesapiservice.azurewebsites.net", "/api", "/Products");
+            var urlProducts = Application.Current.Resources["UrlApiProducts"].ToString();
+            var prefix = Application.Current.Resources["Prefix"].ToString();
+            var ProductsController = Application.Current.Resources["ProductsController"].ToString();
+            var response = await this.apiService.GetList<Product>(urlProducts, prefix, ProductsController);
 
             //Aqui pregunto si llego algo de la api
             if (!response.IsSuccess)
