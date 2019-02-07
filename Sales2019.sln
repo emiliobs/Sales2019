@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesMobile.Android", "Sale
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesMobile.iOS", "SalesMobile\SalesMobile.iOS\SalesMobile.iOS.csproj", "{21BD1DB1-F3A3-4DA3-B73F-3B18AAAE7236}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesMobile", "SalesMobile\SalesMobile\SalesMobile.csproj", "{74669FF6-D22F-4E9E-A8C1-B76A802E096D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesMobile", "SalesMobile\SalesMobile\SalesMobile.csproj", "{74669FF6-D22F-4E9E-A8C1-B76A802E096D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesBackend", "SalesBackend\SalesBackend.csproj", "{12310314-7C88-4393-90F1-13DD96AF4097}"
 EndProject
@@ -106,6 +106,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_PrefixTranslations = False
+		RESX_AutoCreateNewLanguageFiles = False
 		SolutionGuid = {902D13A7-23FE-44BB-AED3-470145C747C9}
 	EndGlobalSection
 EndGlobal

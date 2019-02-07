@@ -2,6 +2,7 @@
 {
     using GalaSoft.MvvmLight.Command;
     using SalesCommon;
+    using SalesMobile.Helpers;
     using SalesMobile.Services;
     using System;
     using System.Collections.Generic;
@@ -80,7 +81,7 @@
             if (!connection.IsSuccess)
             {
                 this.IsRefreshing = false;
-                await Application.Current.MainPage.DisplayAlert("Error.",connection.Message, "Accept.");
+                await Application.Current.MainPage.DisplayAlert(Languages.Error,connection.Message, Languages.Accept);
                 return;
             }
 
@@ -93,7 +94,7 @@
             //Aqui pregunto si llego algo de la api
             if (!response.IsSuccess)
             {
-                await Application.Current.MainPage.DisplayAlert("Error,",response.Message,"Accept.");
+                await Application.Current.MainPage.DisplayAlert(Languages.Error,response.Message,Languages.Error);
 
                 this.IsRefreshing = false;
 

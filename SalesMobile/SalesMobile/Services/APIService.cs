@@ -3,6 +3,7 @@
     using Newtonsoft.Json;
     using Plugin.Connectivity;
     using SalesCommon;
+    using SalesMobile.Helpers;
     using System;
     using System.Collections.Generic;
     using System.Net.Http;
@@ -18,24 +19,25 @@
                 return new Response()
                 {
                     IsSuccess = false,
-                    Result = "Please tuen on your Internet settings.",
+                    Message = Languages.TurnOnInternet,
                 };
 
             }
 
-            var isReachable = await CrossConnectivity.Current.IsRemoteReachable("google.com");
+            var isReachable = await CrossConnectivity.Current.IsRemoteReachable(Languages.google_com);
             if (!isReachable)
             {
                 return new Response
                 {
                     IsSuccess = false,
-                    Message = "NO Internet connections.",
+                    Message = Languages.NoInternet,
                 };
             }
 
             return new Response
             {
-                 IsSuccess = true,
+                IsSuccess = true,
+                Message = Languages.Ok,
             };
         }
         public async Task<Response> GetList<T>(string urlBase, string prefix, string controller)
