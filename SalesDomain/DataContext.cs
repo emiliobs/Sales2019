@@ -14,6 +14,6 @@
 
         }
 
-        public System.Data.Entity.DbSet<SalesCommon.Product> Products { get; set; }
+        public DbSet<SalesCommon.Product> Products { get; set; }
     }
 }
