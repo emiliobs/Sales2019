@@ -141,5 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\avatar.png" />
+    <BundleResource Include="Resources\SALES.jpg" />
   </ItemGroup>
 </Project>
