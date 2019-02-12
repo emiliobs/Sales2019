@@ -139,4 +139,7 @@
       <Name>SalesMobile</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\avatar.png" />
+  </ItemGroup>
 </Project>

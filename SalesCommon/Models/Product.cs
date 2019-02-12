@@ -28,6 +28,19 @@
         [DataType(DataType.Date)]
         public DateTime PublishOn { get; set; }
 
+        public string  ImageFullPath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(ImagePath))
+                {
+                    return "Content/avatar.png";
+                }
+
+                return $"http://192.168.0.15:555/{ImagePath.Substring(1)}";
+            }
+        }
+
         public override string ToString() => this.Description;
      
     }
