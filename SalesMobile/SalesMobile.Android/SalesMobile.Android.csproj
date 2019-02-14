@@ -91,12 +91,7 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable-hdpi\" />
-    <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\drawable-xxhdpi\" />
-    <Folder Include="Resources\drawable-xxxhdpi\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SalesMobile\SalesMobile.csproj">
       <Project>{649AB11A-6337-4417-9949-1EBD0A345E19}</Project>
@@ -104,8 +99,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_action_add_circle.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_add_circle.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_add_circle.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_add_circle.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_add_circle.png" />
     <Content Include="Resources\drawable\avatar.png" />
     <AndroidResource Include="Resources\drawable\SALES.jpg" />
+    <AndroidResource Include="Resources\drawable\ic_action_add_circle.png" />
     <Content Include="Resources\mipmap-hdpi\avatar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

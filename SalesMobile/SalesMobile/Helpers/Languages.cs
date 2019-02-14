@@ -24,5 +24,6 @@
         public static string TurnOnInternet { get => Resource.TurnOnInternet; }
         public static string google_com { get => Resource.google_com; }
         public static string Ok { get => Resource.OK; }
+        public  static string AddProduct { get => Resource.AddProduct; }
     }
 }

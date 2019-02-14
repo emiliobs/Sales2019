@@ -138,4 +138,7 @@
   <data name="OK" xml:space="preserve">
     <value>_Aceptar</value>
   </data>
+  <data name="AddProduct" xml:space="preserve">
+    <value>Agregar producto</value>
+  </data>
 </root>

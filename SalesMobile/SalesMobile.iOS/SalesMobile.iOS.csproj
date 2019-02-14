@@ -142,5 +142,6 @@
   <ItemGroup>
     <Content Include="Resources\avatar.png" />
     <BundleResource Include="Resources\SALES.jpg" />
+    <BundleResource Include="Resources\ic_action_add_circle.png" />
   </ItemGroup>
 </Project>

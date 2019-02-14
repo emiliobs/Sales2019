@@ -5,6 +5,15 @@
              x:Class="SalesMobile.Views.ProductsPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="{ i18n:Translate Products }">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Icon="ic_action_add_circle"
+             Command="{Binding AddProductCommand}"
+             Text="Add New Product.">            
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <StackLayout BindingContext="{Binding Product}" Padding="5">
             <ListView ItemsSource="{Binding Products}"
@@ -27,12 +36,18 @@
                                     Source="{Binding ImageFullPath}"
                                     VerticalOptions="StartAndExpand">                                    
                                 </Image>
-                                <Label
-                                    Grid.Column="1"
+                                <StackLayout Grid.Column="1"  VerticalOptions="Center">
+
+                                    <Label                                  
                                     Text="{Binding Description}"
-                                    FontAttributes="Bold"
-                                    VerticalOptions="Center">                                    
-                                </Label>
+                                    FontAttributes="Bold">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding Remarks}">                                        
+                                    </Label>
+
+                                </StackLayout>
+                             
                                 <Label
                                     Grid.Column="2"
                                     Text="{Binding Price, StringFormat='{0:C2}'}"
@@ -46,4 +61,5 @@
             </ListView>
         </StackLayout>
     </ContentPage.Content>
+    
 </ContentPage>

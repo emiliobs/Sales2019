@@ -4,24 +4,22 @@
     using SalesCommon;
     using SalesMobile.Helpers;
     using SalesMobile.Services;
-    using System;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
-    using System.Text;
     using System.Windows.Input;
     using Xamarin.Forms;
 
     public class ProductViewModel : BaseViewModel
     {
         #region Services
-        private APIService apiService;
+        private readonly APIService apiService;
         #endregion
 
         #region Attributes
 
         private ObservableCollection<Product> products;
         private bool isRefreshing;
-        
+
 
         #endregion
 
@@ -68,7 +66,7 @@
 
 
         public ICommand RefreshCommand => new RelayCommand(LoadProducts);
-        
+
         #endregion
 
         #region Methods
@@ -77,24 +75,24 @@
         {
             this.IsRefreshing = true;
 
-            var connection = await this.apiService.CheckConnection();
+            Response connection = await this.apiService.CheckConnection();
             if (!connection.IsSuccess)
             {
                 this.IsRefreshing = false;
-                await Application.Current.MainPage.DisplayAlert(Languages.Error,connection.Message, Languages.Accept);
+                await Application.Current.MainPage.DisplayAlert(Languages.Error, connection.Message, Languages.Accept);
                 return;
             }
 
             // var response = await this.apiService.GetList<Product>("https://salesapiservice.azurewebsites.net", "/api", "/Products");
-            var urlProducts = Application.Current.Resources["UrlApiProducts"].ToString();
-            var prefix = Application.Current.Resources["Prefix"].ToString();
-            var ProductsController = Application.Current.Resources["ProductsController"].ToString();
-            var response = await this.apiService.GetList<Product>(urlProducts, prefix, ProductsController);
+            string urlProducts = Application.Current.Resources["UrlApiProducts"].ToString();
+            string prefix = Application.Current.Resources["Prefix"].ToString();
+            string ProductsController = Application.Current.Resources["ProductsController"].ToString();
+            Response response = await this.apiService.GetList<Product>(urlProducts, prefix, ProductsController);
 
             //Aqui pregunto si llego algo de la api
             if (!response.IsSuccess)
             {
-                await Application.Current.MainPage.DisplayAlert(Languages.Error,response.Message,Languages.Error);
+                await Application.Current.MainPage.DisplayAlert(Languages.Error, response.Message, Languages.Error);
 
                 this.IsRefreshing = false;
 
@@ -102,7 +100,7 @@
             }
 
             //aqui ya llego una lista de objecto: tambien caste lo que llega de T  una lista de product:
-            var list = (List<Product>)response.Result;
+            List<Product> list = (List<Product>)response.Result;
 
             //aqui convierto la lista a una lista de obsevableCollection:
             this.Products = new ObservableCollection<Product>(list);
