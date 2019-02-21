@@ -25,5 +25,12 @@
         public static string google_com { get => Resource.google_com; }
         public static string Ok { get => Resource.OK; }
         public  static string AddProduct { get => Resource.AddProduct; }
+        public  static string Description { get => Resource.Description; }
+        public  static string DescriptionPlaceHolder { get => Resource.DescriptionPlaceHolder; }
+        public  static string Price { get => Resource.Price; }
+        public static string PricePlaceHolder { get => Resource.PricePlaceHolder; }
+        public static string Save { get => Resource.Save; }
+        public static string Remarks { get => Resource.Remarks; }
+        public static string RemarksPlaceHolder { get => Resource.RemarksPlaceHolder; }
     }
 }

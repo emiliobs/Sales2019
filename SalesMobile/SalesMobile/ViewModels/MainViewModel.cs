@@ -20,7 +20,7 @@
         public MainViewModel()
         {
             this.Product = new ProductViewModel();
-            this.AddProduct = new AddProductViewModel();
+           
         }
         #endregion
 
@@ -34,6 +34,7 @@
 
         private async void GoToAddProduct()
         {
+            this.AddProduct = new AddProductViewModel();
              await Application.Current.MainPage.Navigation.PushAsync(new AddProductPage());
         }
 

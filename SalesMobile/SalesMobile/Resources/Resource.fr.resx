@@ -141,4 +141,25 @@
   <data name="AddProduct" xml:space="preserve">
     <value>Ajouter un produit</value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description.</value>
+  </data>
+  <data name="DescriptionPlaceHolder" xml:space="preserve">
+    <value>Veuillez saisir une description de produit</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Prix</value>
+  </data>
+  <data name="PricePlaceHolder" xml:space="preserve">
+    <value>Entrez le prix du produit.!</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Enregistré !</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Observations</value>
+  </data>
+  <data name="RemarksPlaceHolder" xml:space="preserve">
+    <value>Entrez les remarques sur le produit.!</value>
+  </data>
 </root>
