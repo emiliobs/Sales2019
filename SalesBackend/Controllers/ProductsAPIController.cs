@@ -1,27 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web.Http;
-using System.Web.Http.Description;
-using SalesCommon;
-using SalesDomain;
-
-namespace SalesBackend.Controllers
+﻿namespace SalesBackend.Controllers
 {
+    using SalesCommon;
+    using SalesDomain;
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Infrastructure;
+    using System.Linq;
+    using System.Net;
+    using System.Threading.Tasks;
+    using System.Web.Http;
+    using System.Web.Http.Description;
     public class ProductsAPIController : ApiController
     {
-        private DataContext db = new DataContext();
+        private readonly DataContext db = new DataContext();
 
         // GET: api/ProductsAPI
         public IQueryable<Product> GetProducts()
         {
-            return db.Products;
+            return db.Products.OrderBy(p => p.Description);
         }
 
         // GET: api/ProductsAPI/5
@@ -76,6 +72,11 @@ namespace SalesBackend.Controllers
         [ResponseType(typeof(Product))]
         public async Task<IHttpActionResult> PostProduct(Product product)
         {
+
+            product.IsAvailable = true;
+            product.PublishOn = DateTime.Now.ToUniversalTime();
+            
+
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

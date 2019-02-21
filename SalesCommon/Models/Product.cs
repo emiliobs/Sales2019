@@ -34,7 +34,7 @@
             {
                 if (string.IsNullOrEmpty(ImagePath))
                 {
-                    return "SALES";
+                    return  "SALES.jpg";
                 }
 
                 return $"http://192.168.0.15:555/{ImagePath.Substring(1)}";

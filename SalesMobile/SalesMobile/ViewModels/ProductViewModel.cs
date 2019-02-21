@@ -6,6 +6,7 @@
     using SalesMobile.Services;
     using System.Collections.Generic;
     using System.Collections.ObjectModel;
+    using System.Linq;
     using System.Windows.Input;
     using Xamarin.Forms;
 
@@ -55,10 +56,32 @@
         #region Constructor
         public ProductViewModel()
         {
+            //singleton
+            instance = this;
+
+            //Services:
             this.apiService = new APIService();
+
+            //Methods:
             this.LoadProducts();
         }
 
+
+        #endregion
+
+        #region Singlenton
+
+        private static ProductViewModel instance;
+
+        public static ProductViewModel GetInstance()
+        {
+            if (instance == null)
+            {
+                return new ProductViewModel();
+            }
+
+            return instance;
+        }
 
         #endregion
 

@@ -34,7 +34,7 @@
                                     Grid.Column="0"
                                     WidthRequest="100"
                                     Source="{Binding ImageFullPath}"
-                                    VerticalOptions="StartAndExpand">                                    
+                                    VerticalOptions="FillAndExpand">                                    
                                 </Image>
                                 <StackLayout Grid.Column="1"  VerticalOptions="Center">
 

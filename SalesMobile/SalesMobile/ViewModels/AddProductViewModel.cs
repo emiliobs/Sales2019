@@ -134,7 +134,13 @@
 
             }
 
+            //aqui traigo todos los datos nuevos desde la api post:
+            var newProduct = (Product)response.Result;
+
             
+
+            //Aqui Utilizo el singleton:
+             ProductViewModel.GetInstance().Products.Add(newProduct);
 
             IsRunning = false;
             IsEnabled = true;
