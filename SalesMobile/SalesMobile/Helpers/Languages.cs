@@ -32,5 +32,8 @@
         public static string Save { get => Resource.Save; }
         public static string Remarks { get => Resource.Remarks; }
         public static string RemarksPlaceHolder { get => Resource.RemarksPlaceHolder; }
+        public static string ChangeImage { get => Resource.ChangeImage; }
+        public static string PriceError { get => Resource.PriceError; }
+        public static string DescriptionError { get => Resource.DescriptionError; }
     }
 }

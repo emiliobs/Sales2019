@@ -142,13 +142,13 @@
     <value>Add Product</value>
   </data>
   <data name="Description" xml:space="preserve">
-    <value>Description.</value>
+    <value>Description:</value>
   </data>
   <data name="DescriptionPlaceHolder" xml:space="preserve">
     <value>Enter Product Description.</value>
   </data>
   <data name="Price" xml:space="preserve">
-    <value>Price.</value>
+    <value>Price:</value>
   </data>
   <data name="PricePlaceHolder" xml:space="preserve">
     <value>Enter Product Price.</value>
@@ -157,9 +157,18 @@
     <value>Save.</value>
   </data>
   <data name="Remarks" xml:space="preserve">
-    <value>Remarks.</value>
+    <value>Remarks:</value>
   </data>
   <data name="RemarksPlaceHolder" xml:space="preserve">
     <value>Enter Product Remarks.</value>
+  </data>
+  <data name="ChangeImage" xml:space="preserve">
+    <value>Touch the Image to Change It.</value>
+  </data>
+  <data name="DescriptionError" xml:space="preserve">
+    <value>You must enter a Description.</value>
+  </data>
+  <data name="PriceError" xml:space="preserve">
+    <value>You must enter a price greater than zero.</value>
   </data>
 </root>

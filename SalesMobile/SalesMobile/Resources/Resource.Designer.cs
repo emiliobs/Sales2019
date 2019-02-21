@@ -79,11 +79,29 @@ namespace SalesMobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Description..
+        ///   Looks up a localized string similar to Touch the Image to Change It..
+        /// </summary>
+        public static string ChangeImage {
+            get {
+                return ResourceManager.GetString("ChangeImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description:.
         /// </summary>
         public static string Description {
             get {
                 return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must enter a Description..
+        /// </summary>
+        public static string DescriptionError {
+            get {
+                return ResourceManager.GetString("DescriptionError", resourceCulture);
             }
         }
         
@@ -133,11 +151,20 @@ namespace SalesMobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Price..
+        ///   Looks up a localized string similar to Price:.
         /// </summary>
         public static string Price {
             get {
                 return ResourceManager.GetString("Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must enter a price greater than zero..
+        /// </summary>
+        public static string PriceError {
+            get {
+                return ResourceManager.GetString("PriceError", resourceCulture);
             }
         }
         
@@ -160,7 +187,7 @@ namespace SalesMobile.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Remarks..
+        ///   Looks up a localized string similar to Remarks:.
         /// </summary>
         public static string Remarks {
             get {
